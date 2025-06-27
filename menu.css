@@ -143,4 +143,64 @@ body {
 .apps-box li:nth-child(4) button {
   animation-delay: 0.9s;
 }
+@media (max-width: 768px) {
+  .tv-frame {
+    width: 100vw;
+    aspect-ratio: auto;
+    height: 100vh;
+  }
+
+  .tv-image {
+    height: 100vh;
+    object-fit: contain;
+  }
+
+  .screen-content {
+    top: 12%;
+    left: 5%;
+    width: 90%;
+    height: 76%;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .avatar-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .avatar {
+    width: 50%;
+    height: auto;
+    max-height: none;
+  }
+
+  .apps-box {
+    width: 100%;
+    max-width: none;
+  }
+
+  .apps-box ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .apps-box button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .icono-app {
+    width: 36px;
+    height: 36px;
+  }
+}
 

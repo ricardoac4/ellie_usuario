@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recordatorio</title>
+  <link rel="stylesheet" href="styles/menu.css" />
+  <link rel="stylesheet" href="styles/recordatorio.css" />
+</head>
+<body onload="leerMensaje()">
+  <div class="tv-frame">
+    <img src="assets/tv-37.png" alt="Televisor" class="tv-image" />
+    <div class="screen-content">
+      <div class="container">
+        <div class="avatar-box">
+          <img src="assets/avatar.png" alt="Avatar" class="avatar" />
+        </div>
+        <div class="apps-box">
+          <img src="assets/remedio-mueble.png" alt="Remedio sobre mueble" class="imagen-remedio" />
+          <div class="mensaje-recordatorio">
+            Es hora de tomar el Omega3. Lo dejaste sobre el mueble del living.
+          </div>
+          <button class="volver-btn" onclick="window.location.href='menu.html'">
+            Volver al menú
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function leerMensaje() {
+      const mensaje = "Es hora de tomar el Bio tres. Lo dejaste sobre el mueble del living.";
+      const voz = new SpeechSynthesisUtterance(mensaje);
+      voz.lang = 'es-ES';
+      speechSynthesis.speak(voz);
+    }
+  </script>
+</body>
+</html>

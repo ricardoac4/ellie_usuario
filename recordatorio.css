@@ -1,0 +1,51 @@
+.apps-box {
+  flex: 1;
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* <<--- cambio clave */
+  text-align: center;
+  overflow-y: auto;
+  padding-top: 10px;
+  gap: 20px;
+}
+
+.imagen-remedio {
+  width: 300%;               /* Ocupa todo el ancho disponible */
+  max-width: 360px;          /* Pero sin pasarse de un límite razonable */
+  max-height: 200px;         /* Más alto que antes */
+  object-fit: cover;         /* Recorta si es necesario sin deformar */
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.mensaje-recordatorio {
+  font-size: 1.8rem;
+  background: #fff4e1;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.volver-btn {
+  font-size: 0.8rem;
+  background-color: #fff4e1;
+  color: #000;
+  border: none;
+  padding: 2px 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  width: auto;
+  max-width: 100px;
+  align-self: center;
+}
+
+.volver-btn:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+

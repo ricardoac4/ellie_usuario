@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Recordatorio</title>
+  <title>Reminder</title>
   <link rel="stylesheet" href="menu.css" />
   <link rel="stylesheet" href="recordatorio.css" />
 </head>
-<body onload="leerMensaje()">
+<body onload="readMessage()">
   <div class="tv-frame">
-    <img src="tv-37.png" alt="Televisor" class="tv-image" />
+    <img src="tv-37.png" alt="Television" class="tv-image" />
     <div class="screen-content">
       <div class="container">
         <div class="avatar-box">
           <img src="avatar.png" alt="Avatar" class="avatar" />
         </div>
         <div class="apps-box">
-          <img src="remedio-mueble.png" alt="Remedio sobre mueble" class="imagen-remedio" />
+          <img src="remedio-mueble.png" alt="Medicine on the cabinet" class="imagen-remedio" />
           <div class="mensaje-recordatorio">
-            Es hora de tomar el Omega3. Lo dejaste sobre el mueble del living.
+            It's time to take your Omega 3. You left it on the living room cabinet.
           </div>
           <button class="volver-btn" onclick="window.location.href='menu.html'">
-            Volver al menú
+            Back to menu
           </button>
         </div>
       </div>
@@ -28,11 +28,11 @@
   </div>
 
   <script>
-    function leerMensaje() {
-      const mensaje = "Es hora de tomar el omega tres. Lo dejaste sobre el mueble del living.";
-      const voz = new SpeechSynthesisUtterance(mensaje);
-      voz.lang = 'es-ES';
-      speechSynthesis.speak(voz);
+    function readMessage() {
+      const message = "It's time to take your Omega 3. You left it on the living room cabinet.";
+      const voice = new SpeechSynthesisUtterance(message);
+      voice.lang = 'en-US';
+      speechSynthesis.speak(voice);
     }
   </script>
 </body>

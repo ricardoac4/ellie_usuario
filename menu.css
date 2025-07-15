@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #000; /* fondo fuera de la TV */
+  background: linear-gradient(to bottom, #FF944D, #F36D0D); /* degradado naranja */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ body {
   left: 9%;
   width: 78%;
   height: 66%;
-  background-color: #fad3a3;
+  background: #f2f2f2; /* gris muy claro */
   border-radius: 20px;
   padding: 20px;
   overflow: hidden;
@@ -35,6 +35,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeIn 1s ease-out;
 }
 
 .container {
@@ -63,7 +64,7 @@ body {
 }
 
 .apps-panel {
-  background-color: #f8e0c6;
+  background-color: #f2f2f2; /* gris claro */
   padding: 30px;
   border-radius: 30px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
@@ -88,15 +89,17 @@ body {
   justify-content: center;
   aspect-ratio: 1 / 1;
   width: 100%;
-  padding: 16px;
-  font-size: 1.8rem;
+  padding: 10px;
+  font-size: 1.4rem;
   background-color: transparent;
-  color: #000;
+  color: #333333;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.3s;
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .apps-box button:hover {
@@ -105,11 +108,13 @@ body {
 }
 
 .icono-app {
-  width: 48px;
-  height: 48px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
+
+/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -121,28 +126,13 @@ body {
   }
 }
 
-.screen-content {
-  animation: fadeIn 1s ease-out;
-}
+/* Retrasos para animaciones */
+.apps-box li:nth-child(1) button { animation-delay: 0.3s; }
+.apps-box li:nth-child(2) button { animation-delay: 0.5s; }
+.apps-box li:nth-child(3) button { animation-delay: 0.7s; }
+.apps-box li:nth-child(4) button { animation-delay: 0.9s; }
 
-.apps-box button {
-  opacity: 0;
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-/* Retraso progresivo para cada botón */
-.apps-box li:nth-child(1) button {
-  animation-delay: 0.3s;
-}
-.apps-box li:nth-child(2) button {
-  animation-delay: 0.5s;
-}
-.apps-box li:nth-child(3) button {
-  animation-delay: 0.7s;
-}
-.apps-box li:nth-child(4) button {
-  animation-delay: 0.9s;
-}
+/* Responsive */
 @media (max-width: 768px) {
   .tv-frame {
     width: 100vw;
@@ -171,11 +161,6 @@ body {
     justify-content: flex-start;
   }
 
-  .avatar-box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
 
   .avatar {
     width: 50%;
@@ -203,4 +188,3 @@ body {
     height: 36px;
   }
 }
-
